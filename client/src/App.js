@@ -1,12 +1,34 @@
+import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import Home from "./components/Home";
+import Header from "./components/header";
+import Footer from "./components/footer";
+import Test from "./components/test";
+import Home from "./Page/Home";
+import Login from "./Page/Login";
+import Register from "./Page/Register";
+import Forum from "./Page/Forum";
+
 function App() {
+  const [user, setUser] = useState(
+    localStorage.getItem("dataUser")
+      ? JSON.parse(localStorage.getItem("dataUser"))
+      : null
+  );
   return (
-    <div>
+    <div className="overflow-x-hidden antialiased">
+      <Header user={user} setUser={setUser} />
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="/test" element={<Test />}></Route>
+        <Route
+          path="/login"
+          element={<Login user={user} setUser={setUser} />}
+        ></Route>
+        <Route path="/register" element={<Register />}></Route>
+        <Route path="/forum" element={<Forum />}></Route>
       </Routes>
+      <Footer />
     </div>
   );
 }
