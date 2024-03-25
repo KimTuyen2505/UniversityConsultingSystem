@@ -23,10 +23,31 @@ app.listen(PORT, () => {
 });
 
 var request = require("request");
-app.post("/fetch-html", (req, res) => {
+var cheerio = require("cheerio");
+app.post("/fetch-major", (req, res) => {
   request(req.body.link, function (error, response, body) {
     if (!error && response.statusCode == 200) {
-      res.send(body);
+      $ = cheerio.load(body);
+      var data = $(body).find(".col-md-6");
+      var allMajor = [];
+      data.each(function (index, element) {
+        let listMajor = "";
+        $(element)
+          .find(".list-group")
+          .each(function (index2, element2) {
+            $(element2)
+              .find(".list-group-item")
+              .each(function (index3, element3) {
+                let text = $(this).text();
+                listMajor += text.trim().replace(/\s+/g, " ") + ",";
+              });
+          });
+        listMajor.slice(listMajor.length - 1, 1);
+        allMajor.push(listMajor);
+      });
+      res.send(allMajor);
+    } else {
+      res.send("Error");
     }
   });
 });
