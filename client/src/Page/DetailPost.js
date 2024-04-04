@@ -25,7 +25,7 @@ export default function DetailPost() {
               (x) => x._id === idDetailForum
             );
             if (checkExist) {
-              //   console.log(checkExist);
+              // console.log(checkExist);
               let user = await responseAccount.data.dataAccounts.find(
                 (user) => user._id === checkExist.author
               );
@@ -67,6 +67,15 @@ export default function DetailPost() {
                   setCheckInputReply(checkInput);
                 }
               });
+              if (checkExist.comments.length === 0) {
+                setPost({
+                  ...checkExist,
+                  nameAuthor: user.family_name + " " + user.given_name,
+                  comments: [],
+                });
+                setValueReply(obj);
+                setCheckInputReply(checkInput);
+              }
             }
           })
           .catch(function (error) {
