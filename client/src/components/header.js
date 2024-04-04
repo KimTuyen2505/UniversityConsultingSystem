@@ -7,7 +7,7 @@ export default function Header({ user, setUser }) {
   const [modal, contextHolder] = Modal.useModal();
   const confirm = () => {
     modal.confirm({
-      title: "Confirm",
+      title: "XÁC NHẬN",
       icon: <ExclamationCircleOutlined />,
       content: "Bạn có chắc chắn muốn đăng xuất?",
       okText: "Đăng xuất",

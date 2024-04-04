@@ -8,6 +8,8 @@ import Home from "./Page/Home";
 import Login from "./Page/Login";
 import Register from "./Page/Register";
 import Forum from "./Page/Forum";
+import ForumOfMajors from "./Page/ForumOfMajors";
+import DetailPost from "./Page/DetailPost";
 
 function App() {
   const [user, setUser] = useState(
@@ -27,6 +29,8 @@ function App() {
         ></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/forum" element={<Forum />}></Route>
+        <Route path="/forum/:idForum" element={<ForumOfMajors />}></Route>
+        <Route path="/forum/:idForum/:idDetailForum" element={<DetailPost />}></Route>
       </Routes>
       <Footer />
     </div>

@@ -24,11 +24,6 @@ export default function Forum() {
         link: url,
       })
       .then(async function (response) {
-        let newObj = {};
-        Object.keys(majors).map((major, index) => {
-          newObj[major] = response.data[index].split(",");
-        });
-        setMajors(newObj);
         axios
           .get(env.API_URL + "/major", {})
           .then(async function (responseMajor) {
@@ -52,6 +47,22 @@ export default function Forum() {
                 }
               });
             });
+            let tmpMajors = await responseMajor.data.dataMajors;
+            let newObj = {};
+            Object.keys(majors).map((major, index) => {
+              let arr = response.data[index].split(",");
+              newObj[major] = [];
+              for (let i = 0; i < arr.length; i++) {
+                if (arr[i] !== "") {
+                  newObj[major].push({
+                    element: arr[i],
+                    id: tmpMajors.find((x) => x.nameMajor === arr[i])._id,
+                  });
+                }
+              }
+            });
+            console.log(newObj);
+            setMajors(newObj);
           })
           .catch(function (error) {
             console.log(error);
@@ -89,10 +100,15 @@ export default function Forum() {
                         majors[major].map((childMajor) => {
                           if (childMajor) {
                             return (
-                              <div className="col-span-full lg:col-span-2 overflow-hidden flex relative p-8 rounded-xl bg-white border border-gray-200 hover:bg-gray-100 cursor-pointer">
+                              <div
+                                className="col-span-full lg:col-span-2 overflow-hidden flex relative p-8 rounded-xl bg-white border border-gray-200 hover:bg-gray-100 cursor-pointer"
+                                onClick={() =>
+                                  (window.location.href = `/forum/${childMajor.id}`)
+                                }
+                              >
                                 <div className="size-fit m-auto relative">
                                   <h2 className="text-center font-semibold text-gray-950 text-2xl">
-                                    {childMajor}
+                                    {childMajor.element}
                                   </h2>
                                 </div>
                               </div>

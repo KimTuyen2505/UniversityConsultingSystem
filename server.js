@@ -12,10 +12,12 @@ app.use(cors());
 //routes
 const account = require("./routes/accountRoute");
 const major = require("./routes/majorRoute");
+const posts = require("./routes/postsRoute");
 
 //using
 app.use(account);
 app.use(major);
+app.use(posts);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
