@@ -125,10 +125,10 @@ export default function Home() {
       <div className="relative w-full px-8 border-t border-gray-200 xl:px-0">
         <div className="container flex flex-col items-center justify-between h-full max-w-6xl mx-auto">
           <h2 className="my-5 text-base font-medium tracking-tight text-indigo-500 uppercase">
-            Our Features
+          
           </h2>
           <h3 className="max-w-2xl px-5 mt-2 text-3xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl">
-            Built and Designed with you in Mind
+          Tại sao chọn Đại học Thủ Dầu Một
           </h3>
           <div className="flex flex-col w-full mt-0 lg:flex-row sm:mt-10 lg:mt-20">
             <div className="w-full max-w-md p-4 mx-auto mb-0 sm:mb-16 lg:mb-0 lg:w-1/3">
@@ -238,22 +238,23 @@ export default function Home() {
                             </g>
                           </g>
                         </g>
+
                       </g>
                     </g>
                   </g>
                 </svg>
                 <h4 className="relative mt-6 text-lg font-bold">
-                  Automated Tools
+                Đào Tạo
+                
                 </h4>
                 <p className="relative mt-2 text-base text-center text-gray-600">
-                  Automate your workflow with these top of the line marketing
-                  tools.
+                Nghiên cứu khoa học - Học tập trải nghiệm - Phục vụ cộng đồng
                 </p>
                 <a
                   href="#_"
                   className="relative flex mt-2 text-sm font-medium text-indigo-500 underline"
                 >
-                  Learn More
+                 
                 </a>
               </div>
             </div>
@@ -360,17 +361,16 @@ export default function Home() {
                   </g>
                 </svg>
                 <h4 className="relative mt-6 text-lg font-bold">
-                  Machine Learning
+               Trường Đại Học Top 18 Trên Toàn Quốc
                 </h4>
                 <p className="relative mt-2 text-base text-center text-gray-600">
-                  Your Marketing tools will learn how to better convert and
-                  sell.
+                 Đội ngũ giảng viên tận tình, cơ sở vật chất tiện nghi.
                 </p>
                 <a
                   href="#_"
                   className="relative flex mt-2 text-sm font-medium text-indigo-500 underline"
                 >
-                  Learn More
+                 
                 </a>
               </div>
             </div>
@@ -477,16 +477,16 @@ export default function Home() {
                   </g>
                 </svg>
                 <h4 className="relative mt-6 text-lg font-bold">
-                  Smart Notifications
+                Hơn 40 + Chuyên Ngành Đào Tạo
                 </h4>
                 <p className="relative mt-2 text-base text-center text-gray-600">
-                  Our smart notifications will notify you when users convert.
+                  Chuyên ngành đào tạo đa dạng mang lại nhiều sự lựa chọn.
                 </p>
                 <a
                   href="#_"
                   className="relative flex mt-2 text-sm font-medium text-indigo-500 underline"
                 >
-                  Learn More
+                 
                 </a>
               </div>
             </div>
@@ -502,10 +502,10 @@ export default function Home() {
           className="container flex flex-col items-center h-full max-w-6xl mx-auto"
         >
           <h2 className="my-5 text-base font-medium tracking-tight text-indigo-500 uppercase">
-            Our Pricing
+            
           </h2>
           <h3 className="w-full max-w-2xl px-8 mt-2 text-2xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl md:px-0">
-            Simple, Transparent Pricing for Everyone
+         Lợi thế của sinh viên Đại học Thủ Dầu Một
           </h3>
 
           <div className="max-w-full mx-auto md:max-w-6xl sm:px-8">
@@ -515,17 +515,16 @@ export default function Home() {
                 <div className="overflow-hidden text-black bg-white border-t border-gray-100 rounded-lg shadow-sm">
                   <div className="block max-w-sm px-8 mx-auto mt-5 text-sm text-left text-black sm:text-md lg:px-6">
                     <h3 className="p-3 text-lg font-bold tracking-wide text-center uppercase">
-                      Basic<span className="ml-2 font-light">Plan</span>
+                    Chương trình học bổng <span className="ml-2 font-light"></span>
                     </h3>
                     <h4 className="flex items-center justify-center pb-6 text-4xl font-bold text-center text-gray-900">
                       <span className="mr-1 -ml-2 text-lg text-gray-700">
-                        $
+                        
                       </span>
-                      48
+                     
                     </h4>
                     <p className="text-sm text-gray-600">
-                      In our basic plan you can take advantage of all these
-                      features below.
+              
                     </p>
                   </div>
 
@@ -547,7 +546,8 @@ export default function Home() {
                           </svg>
                         </div>
                         <span className="ml-3 text-lg text-gray-700">
-                          Awesome Feature
+                        Học bổng Khuyến khích
+
                         </span>
                       </li>
                       <li className="flex items-center">
@@ -566,7 +566,7 @@ export default function Home() {
                           </svg>
                         </div>
                         <span className="ml-3 text-lg text-gray-700">
-                          And Another Cool Feature
+                          Học bổng gương mặt tiêu biểu
                         </span>
                       </li>
                       <li className="flex items-center">
@@ -585,37 +585,29 @@ export default function Home() {
                           </svg>
                         </div>
                         <span className="ml-3 text-lg text-gray-700">
-                          One More Feature
+                        Học bổng của các công ty, doanh nghiệp
                         </span>
                       </li>
                     </ul>
                   </div>
                   <div className="flex items-center p-8 uppercase">
-                    <a
-                      href="#_"
-                      className="block w-full px-6 py-4 mt-3 text-lg font-semibold text-center text-white bg-gray-900 rounded shadow-sm hover:bg-green-600"
-                    >
-                      Select This Plan
-                    </a>
+                   
                   </div>
                 </div>
               </div>
               {/* <!-- Pro Pricing --> */}
               <div className="relative z-10 w-full max-w-md my-8 bg-white rounded-lg shadow-lg sm:w-2/3 lg:w-1/3 sm:my-5">
-                <div className="py-4 text-sm font-semibold leading-none tracking-wide text-center text-white uppercase bg-indigo-500 rounded-t">
-                  Most Popular
-                </div>
+               
                 <div className="block max-w-sm px-8 mx-auto mt-5 text-sm text-left text-black sm:text-md lg:px-6">
                   <h3 className="p-3 pb-1 text-lg font-bold tracking-wide text-center uppercase">
-                    Pro<span className="ml-2 font-light">Plan</span>
+                    ĐỘI NGŨ GIẢNG VIÊN<span className="ml-2 font-light"></span>
                   </h3>
                   <h4 className="flex items-center justify-center pb-6 text-5xl font-bold text-center text-gray-900">
-                    <span className="mr-1 -ml-2 text-lg text-gray-700">$</span>
-                    98
+                    <span className="mr-1 -ml-2 text-lg text-gray-700"></span>
+                    
                   </h4>
                   <p className="text-sm text-gray-600">
-                    Our most popular package is the Pro Plan which gives you
-                    access to the following:
+                   
                   </p>
                 </div>
                 <div className="flex justify-start pl-12 mt-8 sm:justify-start">
@@ -636,7 +628,7 @@ export default function Home() {
                         </svg>
                       </div>
                       <span className="ml-3 text-lg text-gray-700">
-                        Really Cool Features
+                        Luôn tận tình với sinh viên
                       </span>
                     </li>
                     <li className="flex items-center">
@@ -655,7 +647,7 @@ export default function Home() {
                         </svg>
                       </div>
                       <span className="ml-3 text-lg text-gray-700">
-                        Another Cool Feature
+                        Bài giảng bám sát thực tế
                       </span>
                     </li>
                     <li className="flex items-center">
@@ -674,19 +666,14 @@ export default function Home() {
                         </svg>
                       </div>
                       <span className="ml-3 text-lg text-gray-700">
-                        And One More
+                        Thấu hiểu và chia sẻ 
                       </span>
                     </li>
                   </ul>
                 </div>
 
                 <div className="flex items-center p-8 uppercase">
-                  <a
-                    href="#_"
-                    className="block w-full px-6 py-4 mt-3 text-lg font-semibold text-center text-white bg-gray-900 rounded shadow-sm hover:bg-indigo-600"
-                  >
-                    Select This Plan
-                  </a>
+                 
                 </div>
               </div>
               {/* <!-- Premium Pricing --> */}
@@ -694,17 +681,16 @@ export default function Home() {
                 <div className="overflow-hidden text-black bg-white rounded-lg shadow-inner">
                   <div className="block max-w-sm px-8 mx-auto mt-5 text-sm text-left text-black sm:text-md lg:px-8">
                     <h3 className="p-3 pb-1 text-lg font-bold tracking-wide text-center uppercase">
-                      Premium<span className="ml-2 font-light">Plan</span>
+                      CƠ SỞ VẬT CHẤT<span className="ml-2 font-light"></span>
                     </h3>
                     <h4 className="flex items-center justify-center pb-6 text-4xl font-bold text-center text-gray-900">
                       <span className="mr-1 -ml-2 text-lg text-gray-700">
-                        $
+                        
                       </span>
-                      78
+                      
                     </h4>
                     <p className="pl-2 text-sm text-gray-600">
-                      With our premium plan you can take advantage of all the
-                      following features:
+                    
                     </p>
                   </div>
                   <div className="flex flex-wrap px-8 mt-8">
@@ -725,7 +711,7 @@ export default function Home() {
                           </svg>
                         </div>
                         <span className="ml-3 text-lg text-gray-700">
-                          Totally Tubular Feature
+                          Đầy đủ tiện nghi 
                         </span>
                       </li>
                       <li className="flex items-center">
@@ -744,7 +730,7 @@ export default function Home() {
                           </svg>
                         </div>
                         <span className="ml-3 text-lg text-gray-700">
-                          Super Cool Feature
+                          Máy móc công nghệ hiện đại
                         </span>
                       </li>
                       <li className="flex items-center">
@@ -763,19 +749,14 @@ export default function Home() {
                           </svg>
                         </div>
                         <span className="ml-3 text-lg text-gray-700">
-                          And One More
+                          Hệ thống phòng máy tiện nghi
                         </span>
                       </li>
                     </ul>
                   </div>
 
                   <div className="flex items-center p-8 uppercase">
-                    <a
-                      href="#_"
-                      className="block w-full px-6 py-4 mt-3 text-lg font-semibold text-center text-white bg-gray-900 rounded shadow-sm hover:bg-green-600"
-                    >
-                      Select This Plan
-                    </a>
+                  
                   </div>
                 </div>
               </div>
@@ -794,14 +775,13 @@ export default function Home() {
           <div className="flex-col items-center">
             <div className="flex flex-col items-center justify-center w-full h-full max-w-2xl pr-8 mx-auto text-center">
               <p className="my-5 text-base font-medium tracking-tight text-indigo-500 uppercase">
-                Our customers love our product
+               
               </p>
               <h2 className="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl">
-                Testimonials
+              Cựu sinh viên nói gì?
               </h2>
               <p className="my-6 text-xl font-medium text-gray-500">
-                Don't just take our word for it, read from our extensive list of
-                case studies and customer testimonials.
+                Những thông chia sẻ của các cựu sinh viên về trường Đại học Thủ Dầu Một
               </p>
             </div>
             <div className="flex flex-col items-center justify-center max-w-2xl py-8 mx-auto xl:flex-row xl:max-w-full">
@@ -817,15 +797,14 @@ export default function Home() {
                         <path d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z" />
                       </svg>
                       <p className="mt-2 text-base text-gray-600">
-                        I'm loving these templates! Very nice features and
-                        layouts.
+                      Không chỉ là việc học lý thuyết, mà tôi còn có cơ hội thực hành và làm việc trên các dự án thực tế, giúp tôi phát triển kỹ năng thực hành trong ngành công nghệ thông tin.
                       </p>
                     </div>
 
                     <h3 className="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">
-                      Sandra Walton
+                    	Phạm Minh An  
                       <span className="mt-1 text-sm leading-5 text-gray-500 truncate">
-                        - CEO SomeCompany
+                      - D19 Công Nghệ Thông Tin 
                       </span>
                     </h3>
                     <p className="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
@@ -847,14 +826,13 @@ export default function Home() {
                         <path d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z" />
                       </svg>
                       <p className="mt-2 text-base text-gray-600">
-                        Really digging this service. Now I can quickly bootstrap
-                        any project.
+                      Các khóa học về thiết kế đồ họa tại trường không chỉ tập trung vào việc học công nghệ mới mà còn đặc biệt chú trọng vào việc khuyến khích sự sáng tạo và cá nhân hóa.
                       </p>
                     </div>
                     <h3 className="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">
-                      Kenny Jones
+                    Nguyễn Đặng Kim Tuyến 
                       <span className="mt-1 text-sm leading-5 text-gray-500 truncate">
-                        - CEO SomeCompany
+                      - D18 Thiết Kế Đồ Họa
                       </span>
                     </h3>
                     <p className="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
@@ -878,15 +856,14 @@ export default function Home() {
                         <path d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z" />
                       </svg>
                       <p className="mt-2 text-base text-gray-600">
-                        Extremely helpful in every single project we have
-                        released.
+                      Tại trường Đại học Thủ Dầu Một, ngành Luật không chỉ giúp tôi hiểu sâu hơn về hệ thống pháp luật mà còn giúp tôi phát triển kỹ năng nghiên cứu, phân tích và lập luận.
                       </p>
                     </div>
 
                     <h3 className="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">
-                      Mike Smith
+                   Nguyễn Văn Minh  
                       <span className="mt-1 text-sm leading-5 text-gray-500 truncate">
-                        - CEO SomeCompany
+                      - D18 Luật
                       </span>
                     </h3>
                     <p className="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
@@ -908,15 +885,14 @@ export default function Home() {
                         <path d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z" />
                       </svg>
                       <p className="mt-2 text-base text-gray-600">
-                        Finally a quick and easy system I can use for any type
-                        of project.
+                      Tôi tin rằng ngành Quản Trị Kinh doanh tại trường đã giúp tôi xây dựng nền tảng kiến thức vững chắc và kỹ năng lãnh đạo hiệu quả.
                       </p>
                     </div>
 
                     <h3 className="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">
-                      Molly Sanchez
+                    Nguyễn Minh Thắng
                       <span className="mt-1 text-sm leading-5 text-gray-500 truncate">
-                        - CEO SomeCompany
+                      - D19 Quản Trị Kinh Doanh 
                       </span>
                     </h3>
                     <p className="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
