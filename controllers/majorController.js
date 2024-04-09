@@ -17,9 +17,10 @@ exports.getAll = (req, res) => {
 };
 
 exports.addMajor = async (req, res) => {
-  const { nameMajor } = req.body;
+  const { nameMajor, detailMajor } = req.body;
   const major = new majorModel({
     nameMajor: nameMajor,
+    detailMajor: detailMajor,
   });
   return major
     .save()

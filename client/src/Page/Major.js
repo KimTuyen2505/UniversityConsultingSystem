@@ -4,7 +4,7 @@ import axios from "axios";
 import * as env from "../env.js";
 import { Link } from "react-router-dom";
 
-export default function Forum() {
+export default function Major() {
   const url = "https://tuyensinh.tdmu.edu.vn";
   const [majors, setMajors] = useState({
     "Ngành Sư Phạm": [],
@@ -89,7 +89,7 @@ export default function Forum() {
           {Object.keys(majors).map((major) => (
             <>
               <div className="flex justify-center text-3xl font-bold">
-                Diễn Đàn Khối {major}
+                Khối {major}
               </div>
               <div className="py-16">
                 <div className="mx-auto px-6 max-w-6xl text-gray-500">
@@ -101,7 +101,7 @@ export default function Forum() {
                             return (
                               <Link
                                 className="col-span-full lg:col-span-2 overflow-hidden flex relative p-8 rounded-xl bg-white border border-gray-200 hover:bg-gray-100 cursor-pointer"
-                                to={`/forum/${childMajor.id}`}
+                                to={`/majors/${childMajor.id}`}
                               >
                                 <div className="size-fit m-auto relative">
                                   <h2 className="text-center font-semibold text-gray-950 text-2xl">

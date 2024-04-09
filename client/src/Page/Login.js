@@ -129,16 +129,14 @@ export default function Login({ user, setUser }) {
                   <GoogleLogin
                     onSuccess={async (credentialResponse) => {
                       const decoded = jwtDecode(credentialResponse.credential);
-                      localStorage.setItem("dataUser", JSON.stringify(decoded));
                       setUser(decoded);
                       axios
                         .get(env.API_URL + "/account", {})
                         .then(function (responseAccount) {
-                          if (
-                            !responseAccount.data.dataAccounts.find(
-                              (x) => x.email === decoded.email
-                            )
-                          ) {
+                          let account = responseAccount.data.dataAccounts.find(
+                            (x) => x.email === decoded.email
+                          );
+                          if (!account) {
                             axios
                               .post(env.API_URL + "/account", {
                                 username: "",
@@ -148,12 +146,25 @@ export default function Login({ user, setUser }) {
                                 family_name: decoded.family_name,
                               })
                               .then(function (response) {
+                                localStorage.setItem(
+                                  "dataUser",
+                                  JSON.stringify({
+                                    ...decoded,
+                                    _id: response.data.dataAccounts.find(
+                                      (x) => x.email === decoded.email
+                                    )._id,
+                                  })
+                                );
                                 navigate("/");
                               })
                               .catch(function (error) {
                                 console.log(error);
                               });
                           } else {
+                            localStorage.setItem(
+                              "dataUser",
+                              JSON.stringify({ ...decoded, _id: account._id })
+                            );
                             navigate("/");
                           }
                         })

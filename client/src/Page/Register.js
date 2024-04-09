@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "antd";
 import axios from "axios";
 
 import * as env from "../env.js";
 
 export default function Register({ user }) {
+  useEffect(() => {
+    if (user) {
+      window.location.href = "/";
+    }
+  }, []);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");

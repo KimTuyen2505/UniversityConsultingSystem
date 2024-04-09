@@ -22,11 +22,11 @@ export default function Home() {
         <div className="container flex flex-col items-center justify-between h-full max-w-6xl px-8 mx-auto -mt-32 lg:flex-row xl:px-0">
           <div className="z-30 flex flex-col items-center w-full max-w-xl pt-48 text-center lg:items-start lg:w-1/2 lg:pt-20 xl:pt-40 lg:text-left">
             <h1 className="uppercase relative mb-4 text-3xl font-black leading-tight text-gray-900 sm:text-6xl xl:mb-8">
-              <div>Tư vấn</div>
-              <div className="mt-2">Tuyển sinh</div>
+              <div>Đại học</div>
+              <div className="mt-4">Thủ Dầu Một</div>
             </h1>
             <p className="pr-0 mb-8 text-base text-gray-600 sm:text-lg xl:text-xl lg:pr-20 italic">
-              "Đồng hành cùng bạn - Kiến tạo tương lai"
+              "Khát vọng - Trách nhiệm - Sáng tạo"
             </p>
             {!user && (
               <Link
@@ -124,11 +124,9 @@ export default function Home() {
     <!-- BEGIN FEATURES SECTION --> */}
       <div className="relative w-full px-8 border-t border-gray-200 xl:px-0">
         <div className="container flex flex-col items-center justify-between h-full max-w-6xl mx-auto">
-          <h2 className="my-5 text-base font-medium tracking-tight text-indigo-500 uppercase">
-          
-          </h2>
+          <h2 className="my-5 text-base font-medium tracking-tight text-indigo-500 uppercase"></h2>
           <h3 className="max-w-2xl px-5 mt-2 text-3xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl">
-          Tại sao chọn Đại học Thủ Dầu Một
+            Tại sao chọn Đại học Thủ Dầu Một
           </h3>
           <div className="flex flex-col w-full mt-0 lg:flex-row sm:mt-10 lg:mt-20">
             <div className="w-full max-w-md p-4 mx-auto mb-0 sm:mb-16 lg:mb-0 lg:w-1/3">
@@ -238,24 +236,18 @@ export default function Home() {
                             </g>
                           </g>
                         </g>
-
                       </g>
                     </g>
                   </g>
                 </svg>
-                <h4 className="relative mt-6 text-lg font-bold">
-                Đào Tạo
-                
-                </h4>
+                <h4 className="relative mt-6 text-lg font-bold">Đào Tạo</h4>
                 <p className="relative mt-2 text-base text-center text-gray-600">
-                Nghiên cứu khoa học - Học tập trải nghiệm - Phục vụ cộng đồng
+                  Nghiên cứu khoa học - Học tập trải nghiệm - Phục vụ cộng đồng
                 </p>
                 <a
                   href="#_"
                   className="relative flex mt-2 text-sm font-medium text-indigo-500 underline"
-                >
-                 
-                </a>
+                ></a>
               </div>
             </div>
 
@@ -361,17 +353,15 @@ export default function Home() {
                   </g>
                 </svg>
                 <h4 className="relative mt-6 text-lg font-bold">
-               Trường Đại Học Top 18 Trên Toàn Quốc
+                  Trường Đại Học Top 18 Trên Toàn Quốc
                 </h4>
                 <p className="relative mt-2 text-base text-center text-gray-600">
-                 Đội ngũ giảng viên tận tình, cơ sở vật chất tiện nghi.
+                  Đội ngũ giảng viên tận tình, cơ sở vật chất tiện nghi.
                 </p>
                 <a
                   href="#_"
                   className="relative flex mt-2 text-sm font-medium text-indigo-500 underline"
-                >
-                 
-                </a>
+                ></a>
               </div>
             </div>
 
@@ -477,7 +467,7 @@ export default function Home() {
                   </g>
                 </svg>
                 <h4 className="relative mt-6 text-lg font-bold">
-                Hơn 40 + Chuyên Ngành Đào Tạo
+                  Hơn 40 + Chuyên Ngành Đào Tạo
                 </h4>
                 <p className="relative mt-2 text-base text-center text-gray-600">
                   Chuyên ngành đào tạo đa dạng mang lại nhiều sự lựa chọn.
@@ -485,9 +475,7 @@ export default function Home() {
                 <a
                   href="#_"
                   className="relative flex mt-2 text-sm font-medium text-indigo-500 underline"
-                >
-                 
-                </a>
+                ></a>
               </div>
             </div>
           </div>
@@ -501,11 +489,9 @@ export default function Home() {
           id="pricing"
           className="container flex flex-col items-center h-full max-w-6xl mx-auto"
         >
-          <h2 className="my-5 text-base font-medium tracking-tight text-indigo-500 uppercase">
-            
-          </h2>
+          <h2 className="my-5 text-base font-medium tracking-tight text-indigo-500 uppercase"></h2>
           <h3 className="w-full max-w-2xl px-8 mt-2 text-2xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl md:px-0">
-         Lợi thế của sinh viên Đại học Thủ Dầu Một
+            Lợi thế của sinh viên Đại học Thủ Dầu Một
           </h3>
 
           <div className="max-w-full mx-auto md:max-w-6xl sm:px-8">
@@ -515,17 +501,13 @@ export default function Home() {
                 <div className="overflow-hidden text-black bg-white border-t border-gray-100 rounded-lg shadow-sm">
                   <div className="block max-w-sm px-8 mx-auto mt-5 text-sm text-left text-black sm:text-md lg:px-6">
                     <h3 className="p-3 text-lg font-bold tracking-wide text-center uppercase">
-                    Chương trình học bổng <span className="ml-2 font-light"></span>
+                      Chương trình học bổng{" "}
+                      <span className="ml-2 font-light"></span>
                     </h3>
                     <h4 className="flex items-center justify-center pb-6 text-4xl font-bold text-center text-gray-900">
-                      <span className="mr-1 -ml-2 text-lg text-gray-700">
-                        
-                      </span>
-                     
+                      <span className="mr-1 -ml-2 text-lg text-gray-700"></span>
                     </h4>
-                    <p className="text-sm text-gray-600">
-              
-                    </p>
+                    <p className="text-sm text-gray-600"></p>
                   </div>
 
                   <div className="flex flex-wrap px-6 mt-8">
@@ -546,8 +528,7 @@ export default function Home() {
                           </svg>
                         </div>
                         <span className="ml-3 text-lg text-gray-700">
-                        Học bổng Khuyến khích
-
+                          Học bổng Khuyến khích
                         </span>
                       </li>
                       <li className="flex items-center">
@@ -585,30 +566,24 @@ export default function Home() {
                           </svg>
                         </div>
                         <span className="ml-3 text-lg text-gray-700">
-                        Học bổng của các công ty, doanh nghiệp
+                          Học bổng của các công ty, doanh nghiệp
                         </span>
                       </li>
                     </ul>
                   </div>
-                  <div className="flex items-center p-8 uppercase">
-                   
-                  </div>
+                  <div className="flex items-center p-8 uppercase"></div>
                 </div>
               </div>
               {/* <!-- Pro Pricing --> */}
               <div className="relative z-10 w-full max-w-md my-8 bg-white rounded-lg shadow-lg sm:w-2/3 lg:w-1/3 sm:my-5">
-               
                 <div className="block max-w-sm px-8 mx-auto mt-5 text-sm text-left text-black sm:text-md lg:px-6">
                   <h3 className="p-3 pb-1 text-lg font-bold tracking-wide text-center uppercase">
                     ĐỘI NGŨ GIẢNG VIÊN<span className="ml-2 font-light"></span>
                   </h3>
                   <h4 className="flex items-center justify-center pb-6 text-5xl font-bold text-center text-gray-900">
                     <span className="mr-1 -ml-2 text-lg text-gray-700"></span>
-                    
                   </h4>
-                  <p className="text-sm text-gray-600">
-                   
-                  </p>
+                  <p className="text-sm text-gray-600"></p>
                 </div>
                 <div className="flex justify-start pl-12 mt-8 sm:justify-start">
                   <ul>
@@ -666,15 +641,13 @@ export default function Home() {
                         </svg>
                       </div>
                       <span className="ml-3 text-lg text-gray-700">
-                        Thấu hiểu và chia sẻ 
+                        Thấu hiểu và chia sẻ
                       </span>
                     </li>
                   </ul>
                 </div>
 
-                <div className="flex items-center p-8 uppercase">
-                 
-                </div>
+                <div className="flex items-center p-8 uppercase"></div>
               </div>
               {/* <!-- Premium Pricing --> */}
               <div className="relative z-0 w-11/12 max-w-sm my-8 rounded-lg shadow-lg sm:w-3/5 lg:w-1/3 sm:my-5 md:-ml-4">
@@ -684,14 +657,9 @@ export default function Home() {
                       CƠ SỞ VẬT CHẤT<span className="ml-2 font-light"></span>
                     </h3>
                     <h4 className="flex items-center justify-center pb-6 text-4xl font-bold text-center text-gray-900">
-                      <span className="mr-1 -ml-2 text-lg text-gray-700">
-                        
-                      </span>
-                      
+                      <span className="mr-1 -ml-2 text-lg text-gray-700"></span>
                     </h4>
-                    <p className="pl-2 text-sm text-gray-600">
-                    
-                    </p>
+                    <p className="pl-2 text-sm text-gray-600"></p>
                   </div>
                   <div className="flex flex-wrap px-8 mt-8">
                     <ul>
@@ -711,7 +679,7 @@ export default function Home() {
                           </svg>
                         </div>
                         <span className="ml-3 text-lg text-gray-700">
-                          Đầy đủ tiện nghi 
+                          Đầy đủ tiện nghi
                         </span>
                       </li>
                       <li className="flex items-center">
@@ -755,9 +723,7 @@ export default function Home() {
                     </ul>
                   </div>
 
-                  <div className="flex items-center p-8 uppercase">
-                  
-                  </div>
+                  <div className="flex items-center p-8 uppercase"></div>
                 </div>
               </div>
             </div>
@@ -774,14 +740,13 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="flex-col items-center">
             <div className="flex flex-col items-center justify-center w-full h-full max-w-2xl pr-8 mx-auto text-center">
-              <p className="my-5 text-base font-medium tracking-tight text-indigo-500 uppercase">
-               
-              </p>
+              <p className="my-5 text-base font-medium tracking-tight text-indigo-500 uppercase"></p>
               <h2 className="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl">
-              Cựu sinh viên nói gì?
+                Cựu sinh viên nói gì?
               </h2>
               <p className="my-6 text-xl font-medium text-gray-500">
-                Những thông chia sẻ của các cựu sinh viên về trường Đại học Thủ Dầu Một
+                Những thông chia sẻ của các cựu sinh viên về trường Đại học Thủ
+                Dầu Một
               </p>
             </div>
             <div className="flex flex-col items-center justify-center max-w-2xl py-8 mx-auto xl:flex-row xl:max-w-full">
@@ -797,21 +762,25 @@ export default function Home() {
                         <path d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z" />
                       </svg>
                       <p className="mt-2 text-base text-gray-600">
-                      Không chỉ là việc học lý thuyết, mà tôi còn có cơ hội thực hành và làm việc trên các dự án thực tế, giúp tôi phát triển kỹ năng thực hành trong ngành công nghệ thông tin.
+                        Không chỉ là việc học lý thuyết, mà tôi còn có cơ hội
+                        thực hành và làm việc trên các dự án thực tế, giúp tôi
+                        phát triển kỹ năng thực hành trong ngành công nghệ thông
+                        tin.
                       </p>
                     </div>
 
                     <h3 className="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">
-                    	Phạm Minh An  
+                      Phạm Minh An
                       <span className="mt-1 text-sm leading-5 text-gray-500 truncate">
-                      - D19 Công Nghệ Thông Tin 
+                        {" "}
+                        - D19 Công Nghệ Thông Tin
                       </span>
                     </h3>
                     <p className="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
                   </div>
                   <img
                     className="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
-                    src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2694&q=80"
+                    src="/Images/AnhAn.png"
                     alt=""
                   />
                 </blockquote>
@@ -826,20 +795,23 @@ export default function Home() {
                         <path d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z" />
                       </svg>
                       <p className="mt-2 text-base text-gray-600">
-                      Các khóa học về thiết kế đồ họa tại trường không chỉ tập trung vào việc học công nghệ mới mà còn đặc biệt chú trọng vào việc khuyến khích sự sáng tạo và cá nhân hóa.
+                        Các khóa học về thiết kế đồ họa tại trường không chỉ tập
+                        trung vào việc học công nghệ mới mà còn đặc biệt chú
+                        trọng vào việc khuyến khích sự sáng tạo và cá nhân hóa.
                       </p>
                     </div>
                     <h3 className="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">
-                    Nguyễn Đặng Kim Tuyến 
+                      Nguyễn Đặng Kim Tuyến
                       <span className="mt-1 text-sm leading-5 text-gray-500 truncate">
-                      - D18 Thiết Kế Đồ Họa
+                        {" "}
+                        - D18 Thiết Kế Đồ Họa
                       </span>
                     </h3>
                     <p className="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
                   </div>
                   <img
                     className="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
-                    src="https://images.unsplash.com/photo-1546820389-44d77e1f3b31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80"
+                    src="/Images/ChiTuyen.png"
                     alt=""
                   />
                 </blockquote>
@@ -856,21 +828,25 @@ export default function Home() {
                         <path d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z" />
                       </svg>
                       <p className="mt-2 text-base text-gray-600">
-                      Tại trường Đại học Thủ Dầu Một, ngành Luật không chỉ giúp tôi hiểu sâu hơn về hệ thống pháp luật mà còn giúp tôi phát triển kỹ năng nghiên cứu, phân tích và lập luận.
+                        Tại trường Đại học Thủ Dầu Một, ngành Luật không chỉ
+                        giúp tôi hiểu sâu hơn về hệ thống pháp luật mà còn giúp
+                        tôi phát triển kỹ năng nghiên cứu, phân tích và lập
+                        luận.
                       </p>
                     </div>
 
                     <h3 className="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">
-                   Nguyễn Văn Minh  
+                      Nguyễn Văn Minh
                       <span className="mt-1 text-sm leading-5 text-gray-500 truncate">
-                      - D18 Luật
+                        {" "}
+                        - D18 Luật
                       </span>
                     </h3>
                     <p className="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
                   </div>
                   <img
                     className="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
-                    src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1700&q=80"
+                    src="/Images/AnhMinh.jpg"
                     alt=""
                   />
                 </blockquote>
@@ -885,21 +861,24 @@ export default function Home() {
                         <path d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z" />
                       </svg>
                       <p className="mt-2 text-base text-gray-600">
-                      Tôi tin rằng ngành Quản Trị Kinh doanh tại trường đã giúp tôi xây dựng nền tảng kiến thức vững chắc và kỹ năng lãnh đạo hiệu quả.
+                        Tôi tin rằng ngành Quản Trị Kinh doanh tại trường đã
+                        giúp tôi xây dựng nền tảng kiến thức vững chắc và kỹ
+                        năng lãnh đạo hiệu quả.
                       </p>
                     </div>
 
                     <h3 className="pl-12 mt-3 text-base font-medium leading-5 text-gray-800 truncate">
-                    Nguyễn Minh Thắng
+                      Nguyễn Minh Thắng
                       <span className="mt-1 text-sm leading-5 text-gray-500 truncate">
-                      - D19 Quản Trị Kinh Doanh 
+                        {" "}
+                        - D19 Quản Trị Kinh Doanh
                       </span>
                     </h3>
                     <p className="mt-1 text-sm leading-5 text-gray-500 truncate"></p>
                   </div>
                   <img
                     className="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
-                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80"
+                    src="/Images/AnhThang.jpg"
                     alt=""
                   />
                 </blockquote>

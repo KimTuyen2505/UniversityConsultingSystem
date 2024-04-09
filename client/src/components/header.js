@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Modal } from "antd";
 import { ExclamationCircleOutlined } from "@ant-design/icons";
 
 export default function Header({ user, setUser }) {
   const [modal, contextHolder] = Modal.useModal();
+  const [chooseTab, setChooseTab] = useState(0);
   const confirm = () => {
     modal.confirm({
       title: "XÁC NHẬN",
@@ -23,8 +24,8 @@ export default function Header({ user, setUser }) {
     <header className="relative z-50 w-full h-24">
       {contextHolder}
       <div className="container flex items-center justify-center h-full max-w-6xl px-8 mx-auto sm:justify-between xl:px-0">
-        <Link to="/">
-          <img width={100} src="/Images/logo-TDMU.png" alt="TDMU" />
+        <Link to="/" onClick={() => setChooseTab(0)}>
+          <img width={130} src="/Images/logo-TDMU.png" alt="TDMU" />
         </Link>
 
         <nav
@@ -32,31 +33,52 @@ export default function Header({ user, setUser }) {
           className="absolute top-0 left-0 z-50 flex-col items-center justify-between hidden w-full h-64 pt-5 mt-24 text-sm text-gray-800 bg-white border-t border-gray-200 md:w-auto md:flex-row md:h-24 lg:text-base md:bg-transparent md:mt-0 md:border-none md:py-0 md:flex md:relative"
         >
           <Link
+            onClick={() => setChooseTab(1)}
             to={"/news"}
-            className="uppercase font-bold duration-100 transition-color hover:text-white hover:bg-slate-400 h-full flex items-center justify-center pl-5 pr-5"
+            className={
+              chooseTab === 1
+                ? "uppercase font-bold duration-100 transition-color text-white bg-slate-400 h-full flex items-center justify-center pl-5 pr-5"
+                : "uppercase font-bold duration-100 transition-color hover:text-white hover:bg-slate-400 h-full flex items-center justify-center pl-5 pr-5"
+            }
           >
             TIN TỨC
           </Link>
           <Link
+            onClick={() => setChooseTab(2)}
             to={"/majors"}
-            className="uppercase font-bold duration-100 transition-color hover:text-white hover:bg-slate-400 h-full flex items-center justify-center pl-5 pr-5"
+            className={
+              chooseTab === 2
+                ? "uppercase font-bold duration-100 transition-color text-white bg-slate-400 h-full flex items-center justify-center pl-5 pr-5"
+                : "uppercase font-bold duration-100 transition-color hover:text-white hover:bg-slate-400 h-full flex items-center justify-center pl-5 pr-5"
+            }
           >
             ĐÀO TẠO
           </Link>
           <Link
+            onClick={() => setChooseTab(3)}
             to={"/testing"}
-            className="uppercase font-bold duration-100 transition-color hover:text-white hover:bg-slate-400 h-full flex items-center justify-center pl-5 pr-5"
+            className={
+              chooseTab === 3
+                ? "uppercase font-bold duration-100 transition-color text-white bg-slate-400 h-full flex items-center justify-center pl-5 pr-5"
+                : "uppercase font-bold duration-100 transition-color hover:text-white hover:bg-slate-400 h-full flex items-center justify-center pl-5 pr-5"
+            }
           >
             KIỂM TRA
           </Link>
           <Link
+            onClick={() => setChooseTab(4)}
             to={"/forum"}
-            className="uppercase font-bold duration-100 transition-color hover:text-white hover:bg-slate-400 h-full flex items-center justify-center pl-5 pr-5"
+            className={
+              chooseTab === 4
+                ? "uppercase font-bold duration-100 transition-color text-white bg-slate-400 h-full flex items-center justify-center pl-5 pr-5"
+                : "uppercase font-bold duration-100 transition-color hover:text-white hover:bg-slate-400 h-full flex items-center justify-center pl-5 pr-5"
+            }
           >
             Diễn đàn
           </Link>
           {user?.username === "admin" && (
             <Link
+              onClick={() => setChooseTab(0)}
               to={"/administrators"}
               className="uppercase font-bold duration-100 transition-color hover:text-white hover:bg-slate-400 h-full flex items-center justify-center pl-5 pr-5"
             >
@@ -69,13 +91,17 @@ export default function Header({ user, setUser }) {
           {user ? (
             <div>
               <Link
-                to={"/profile"}
+                onClick={() => setChooseTab(0)}
+                to={`/profile/${user._id}`}
                 className="relative z-40 px-3 py-2 mr-0 text-sm font-bold text-pink-500 md:px-5 lg:text-white sm:mr-3 md:mt-0"
               >
                 {user.given_name}
               </Link>
               <button
-                onClick={confirm}
+                onClick={() => {
+                  confirm();
+                  setChooseTab(0);
+                }}
                 className="relative z-40 inline-block w-auto h-full px-5 py-3 text-sm font-bold leading-none text-white transition-all duration-300 bg-indigo-700 rounded shadow-md fold-bold lg:bg-white lg:text-indigo-700 lg:shadow-none hover:shadow-xl"
               >
                 Đăng xuất

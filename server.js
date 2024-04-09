@@ -33,7 +33,7 @@ app.post("/fetch-major", (req, res) => {
       var data = $(body).find(".col-md-6");
       var allMajor = [];
       data.each(function (index, element) {
-        let listMajor = "";
+        let listMajor = { detail: "", name: "" };
         $(element)
           .find(".list-group")
           .each(function (index2, element2) {
@@ -41,13 +41,33 @@ app.post("/fetch-major", (req, res) => {
               .find(".list-group-item")
               .each(function (index3, element3) {
                 let text = $(this).text();
-                listMajor += text.trim().replace(/\s+/g, " ") + ",";
+                let link = $(this).attr("href");
+                listMajor["detail"] += link + ",";
+                listMajor["name"] += text.trim().replace(/\s+/g, " ") + ",";
               });
           });
-        listMajor.slice(listMajor.length - 1, 1);
+        listMajor["detail"].slice(listMajor["detail"].length - 1, 1);
+        listMajor["name"].slice(listMajor["name"].length - 1, 1);
         allMajor.push(listMajor);
       });
+      // console.log(allMajor);
       res.send(allMajor);
+    } else {
+      res.send("Error");
+    }
+  });
+});
+app.post("/fetch-detail-major", (req, res) => {
+  request(req.body.link, function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      $ = cheerio.load(body);
+      let url = "https://tuyensinh.tdmu.edu.vn";
+      var data = $(body).find(".noidungbaidang img");
+      let listImage = [];
+      data.each(function (index, element) {
+        listImage.push(`${url}${$(element).attr("src")}`);
+      });
+      res.send(listImage);
     } else {
       res.send("Error");
     }

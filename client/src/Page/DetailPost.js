@@ -42,7 +42,7 @@ export default function DetailPost() {
                   listReply.push({
                     ...reply,
                     nameAuthor:
-                      authorReply.family_name + " " + authorReply.given_name,
+                      authorReply?.family_name + " " + authorReply?.given_name,
                   });
                 });
                 let authorComment =
@@ -86,8 +86,25 @@ export default function DetailPost() {
         console.log(error);
       });
   };
+  const [major, setMajor] = useState("");
+  const fetchNameMajor = async () => {
+    axios
+      .get(env.API_URL + "/major", {})
+      .then(async function (responseMajor) {
+        let check = await responseMajor.data.dataMajors.find(
+          (x) => x._id === idForum
+        );
+        if (check) {
+          setMajor(check.nameMajor);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
   useEffect(() => {
     fetchDataPost();
+    fetchNameMajor();
   }, []);
 
   const addComment = () => {
@@ -177,6 +194,9 @@ export default function DetailPost() {
     <div className="relative z-50 pt-5 mt-2 mb-2 w-4/5 m-auto">
       <div className="bg-clip-border rounded-xl bg-white shadow-md">
         <div className="bg-clip-border rounded-xl bg-transparent shadow-none m-0 p-6">
+          <div className="flex justify-center text-3xl font-bold">
+            Diễn Đàn Ngành {major}
+          </div>
           <div className="mx-auto my-10 w-full rounded-xl border px-4 py-6 text-gray-700">
             <div className="mb-5">
               <div className="flex relative items-center">

@@ -106,3 +106,46 @@ exports.deleteAccount = (req, res) => {
       });
     });
 };
+
+exports.updateAvatar = (req, res) => {
+  const { avatar } = req.body;
+  accountModel
+    .findByIdAndUpdate(req.body.id, {
+      avatar: avatar,
+    })
+    .then(() => {
+      return res.status(204).json({
+        success: true,
+        message: "Update avatar successfully",
+      });
+    })
+    .catch((error) => {
+      console.log(error);
+      res.status(500).json({
+        success: false,
+        message: "Server error. Please try again.",
+        error: error.message,
+      });
+    });
+};
+exports.updateFollower = (req, res) => {
+  const { follwers } = req.body;
+  accountModel
+    .findByIdAndUpdate(req.body.id, {
+      follwers: follwers,
+    })
+    .then(() => {
+      return res.status(204).json({
+        success: true,
+        message: "Update follwers successfully",
+      });
+    })
+    .catch((error) => {
+      console.log(error);
+      res.status(500).json({
+        success: false,
+        message: "Server error. Please try again.",
+        error: error.message,
+      });
+    });
+};
