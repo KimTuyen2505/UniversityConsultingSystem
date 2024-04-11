@@ -7,7 +7,7 @@ router.post("/account", accountController.addAccount);
 router.put("/update-name-account", accountController.updateName);
 router.put("/update-password-account", accountController.updatePassword);
 router.put("/update-avatar-account", accountController.updateAvatar);
-router.put("/update-follwers-account", accountController.updateFollower);
+router.put("/update-followers-account", accountController.updateFollower);
 router.put("/delete-account", accountController.deleteAccount);
 
 module.exports = router;

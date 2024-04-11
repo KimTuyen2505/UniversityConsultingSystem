@@ -13,11 +13,15 @@ app.use(cors());
 const account = require("./routes/accountRoute");
 const major = require("./routes/majorRoute");
 const posts = require("./routes/postsRoute");
+const chats = require("./routes/chatRoute");
+const scores = require("./routes/scoresRoute");
 
 //using
 app.use(account);
 app.use(major);
 app.use(posts);
+app.use(chats);
+app.use(scores);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

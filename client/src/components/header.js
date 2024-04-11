@@ -17,6 +17,7 @@ export default function Header({ user, setUser }) {
       onOk() {
         localStorage.removeItem("dataUser");
         setUser(null);
+        window.location.href = "/";
       },
     });
   };
@@ -32,17 +33,6 @@ export default function Header({ user, setUser }) {
           id="nav"
           className="absolute top-0 left-0 z-50 flex-col items-center justify-between hidden w-full h-64 pt-5 mt-24 text-sm text-gray-800 bg-white border-t border-gray-200 md:w-auto md:flex-row md:h-24 lg:text-base md:bg-transparent md:mt-0 md:border-none md:py-0 md:flex md:relative"
         >
-          <Link
-            onClick={() => setChooseTab(1)}
-            to={"/news"}
-            className={
-              chooseTab === 1
-                ? "uppercase font-bold duration-100 transition-color text-white bg-slate-400 h-full flex items-center justify-center pl-5 pr-5"
-                : "uppercase font-bold duration-100 transition-color hover:text-white hover:bg-slate-400 h-full flex items-center justify-center pl-5 pr-5"
-            }
-          >
-            TIN TỨC
-          </Link>
           <Link
             onClick={() => setChooseTab(2)}
             to={"/majors"}

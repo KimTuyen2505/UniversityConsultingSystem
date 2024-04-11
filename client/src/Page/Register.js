@@ -63,7 +63,86 @@ export default function Register({ user }) {
                     family_name: familyName,
                   })
                   .then(function (response) {
-                    window.location.href = "/login";
+                    axios
+                      .post(env.API_URL + "/score", {
+                        idUser: response.data.data._id,
+                        HK1Lop11: {
+                          toan: 0,
+                          ly: 0,
+                          hoa: 0,
+                          sinh: 0,
+                          van: 0,
+                          su: 0,
+                          dia: 0,
+                          gdcd: 0,
+                          anh: 0,
+                          trung: 0,
+                        },
+                        HK2Lop11: {
+                          toan: 0,
+                          ly: 0,
+                          hoa: 0,
+                          sinh: 0,
+                          van: 0,
+                          su: 0,
+                          dia: 0,
+                          gdcd: 0,
+                          anh: 0,
+                          trung: 0,
+                        },
+                        HK1Lop12: {
+                          toan: 0,
+                          ly: 0,
+                          hoa: 0,
+                          sinh: 0,
+                          van: 0,
+                          su: 0,
+                          dia: 0,
+                          gdcd: 0,
+                          anh: 0,
+                          trung: 0,
+                        },
+                        nangKhieu: 0,
+                        khuVuc: "",
+                        doiTuong: "",
+                        tongLop12: {
+                          toan: 0,
+                          ly: 0,
+                          hoa: 0,
+                          sinh: 0,
+                          van: 0,
+                          su: 0,
+                          dia: 0,
+                          gdcd: 0,
+                          anh: 0,
+                          trung: 0,
+                        },
+                        danhGiaNangLuc: 0,
+                        kyThiTHPT: {
+                          tunhien: {
+                            toan: 0,
+                            ly: 0,
+                            hoa: 0,
+                            sinh: 0,
+                            van: 0,
+                            anh: 0,
+                          },
+                          xahoi: {
+                            toan: 0,
+                            su: 0,
+                            dia: 0,
+                            gdcd: 0,
+                            van: 0,
+                            anh: 0,
+                          },
+                        },
+                      })
+                      .then(function (response) {
+                        window.location.href = "/login";
+                      })
+                      .catch(function (error) {
+                        console.log(error);
+                      });
                   })
                   .catch(function (error) {
                     console.log(error);

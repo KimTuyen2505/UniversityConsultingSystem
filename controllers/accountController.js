@@ -129,15 +129,15 @@ exports.updateAvatar = (req, res) => {
     });
 };
 exports.updateFollower = (req, res) => {
-  const { follwers } = req.body;
+  const { followers } = req.body;
   accountModel
     .findByIdAndUpdate(req.body.id, {
-      follwers: follwers,
+      followers: followers,
     })
     .then(() => {
       return res.status(204).json({
         success: true,
-        message: "Update follwers successfully",
+        message: "Update followers successfully",
       });
     })
     .catch((error) => {

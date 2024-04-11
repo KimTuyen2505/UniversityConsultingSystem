@@ -146,16 +146,95 @@ export default function Login({ user, setUser }) {
                                 family_name: decoded.family_name,
                               })
                               .then(function (response) {
-                                localStorage.setItem(
-                                  "dataUser",
-                                  JSON.stringify({
-                                    ...decoded,
-                                    _id: response.data.dataAccounts.find(
-                                      (x) => x.email === decoded.email
-                                    )._id,
+                                axios
+                                  .post(env.API_URL + "/score", {
+                                    idUser: response.data.data._id,
+                                    HK1Lop11: {
+                                      toan: 0,
+                                      ly: 0,
+                                      hoa: 0,
+                                      sinh: 0,
+                                      van: 0,
+                                      su: 0,
+                                      dia: 0,
+                                      gdcd: 0,
+                                      anh: 0,
+                                      trung: 0,
+                                    },
+                                    HK2Lop11: {
+                                      toan: 0,
+                                      ly: 0,
+                                      hoa: 0,
+                                      sinh: 0,
+                                      van: 0,
+                                      su: 0,
+                                      dia: 0,
+                                      gdcd: 0,
+                                      anh: 0,
+                                      trung: 0,
+                                    },
+                                    HK1Lop12: {
+                                      toan: 0,
+                                      ly: 0,
+                                      hoa: 0,
+                                      sinh: 0,
+                                      van: 0,
+                                      su: 0,
+                                      dia: 0,
+                                      gdcd: 0,
+                                      anh: 0,
+                                      trung: 0,
+                                    },
+                                    nangKhieu: 0,
+                                    khuVuc: "",
+                                    doiTuong: "",
+                                    tongLop12: {
+                                      toan: 0,
+                                      ly: 0,
+                                      hoa: 0,
+                                      sinh: 0,
+                                      van: 0,
+                                      su: 0,
+                                      dia: 0,
+                                      gdcd: 0,
+                                      anh: 0,
+                                      trung: 0,
+                                    },
+                                    danhGiaNangLuc: 0,
+                                    kyThiTHPT: {
+                                      tunhien: {
+                                        toan: 0,
+                                        ly: 0,
+                                        hoa: 0,
+                                        sinh: 0,
+                                        van: 0,
+                                        anh: 0,
+                                      },
+                                      xahoi: {
+                                        toan: 0,
+                                        su: 0,
+                                        dia: 0,
+                                        gdcd: 0,
+                                        van: 0,
+                                        anh: 0,
+                                      },
+                                    },
                                   })
-                                );
-                                navigate("/");
+                                  .then(async function (response) {
+                                    localStorage.setItem(
+                                      "dataUser",
+                                      JSON.stringify({
+                                        ...decoded,
+                                        _id: await response.data.dataAccounts.find(
+                                          (x) => x.email === decoded.email
+                                        )._id,
+                                      })
+                                    );
+                                    window.location.href = "/";
+                                  })
+                                  .catch(function (error) {
+                                    console.log(error);
+                                  });
                               })
                               .catch(function (error) {
                                 console.log(error);
@@ -165,7 +244,7 @@ export default function Login({ user, setUser }) {
                               "dataUser",
                               JSON.stringify({ ...decoded, _id: account._id })
                             );
-                            navigate("/");
+                            window.location.href = "/";
                           }
                         })
                         .catch(function (error) {
