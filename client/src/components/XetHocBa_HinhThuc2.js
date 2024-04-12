@@ -100,10 +100,6 @@ export default function XetHocBa_HinhThuc2({
       value: "van,su,nk",
     },
     {
-      label: "M06: Văn, Toán, Năng khiếu",
-      value: "van,toan,nk",
-    },
-    {
       label: "M07: Văn, Địa, Năng khiếu",
       value: "van,dia,nk",
     },
@@ -113,10 +109,6 @@ export default function XetHocBa_HinhThuc2({
     },
     {
       label: "M11: Văn, Anh, Năng khiếu",
-      value: "van,anh,nk",
-    },
-    {
-      label: "N03: Văn, Anh, Năng khiếu",
       value: "van,anh,nk",
     },
     {

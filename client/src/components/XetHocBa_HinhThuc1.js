@@ -100,10 +100,6 @@ export default function XetHocBa_HinhThuc1({
       value: "van,su,nk",
     },
     {
-      label: "M06: Văn, Toán, Năng khiếu",
-      value: "van,toan,nk",
-    },
-    {
       label: "M07: Văn, Địa, Năng khiếu",
       value: "van,dia,nk",
     },
@@ -113,10 +109,6 @@ export default function XetHocBa_HinhThuc1({
     },
     {
       label: "M11: Văn, Anh, Năng khiếu",
-      value: "van,anh,nk",
-    },
-    {
-      label: "N03: Văn, Anh, Năng khiếu",
       value: "van,anh,nk",
     },
     {
@@ -173,7 +165,7 @@ export default function XetHocBa_HinhThuc1({
     // console.log("choice: ", major, scores);
     for (let i = 0; i < 3; i++) {
       if (major[i] === "nk") {
-        currentYourScore += scores["nangkhieu"];
+        currentYourScore += scores["nangKhieu"];
       } else if (major[i] === "khtn") {
         currentYourScore +=
           ((scores.HK1Lop11["ly"] +

@@ -82,7 +82,7 @@ export default function Testing() {
     setKey(value);
   };
   return (
-    <div className="relative z-50 pt-5 mt-2 mb-2 w-4/5 m-auto h-screen">
+    <div className="relative z-50 pt-5 mt-2 mb-2 w-4/5 m-auto min-h-screen">
       <div className="bg-clip-border rounded-xl bg-white shadow-md">
         <div className="bg-clip-border rounded-xl bg-transparent shadow-none m-0 p-6">
           <Select
