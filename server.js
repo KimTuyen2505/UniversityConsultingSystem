@@ -77,3 +77,64 @@ app.post("/fetch-detail-major", (req, res) => {
     }
   });
 });
+app.post("/fetch-score-thpt", (req, res) => {
+  request(
+    "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-thu-dau-mot-TDM.html",
+    function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        $ = cheerio.load(body);
+        var data = $(body).find("#tab_1 table .bg_white");
+        let listMajor = [];
+        data.each(function (index, element) {
+          var tds = $(element).find("td");
+          let major = tds.eq(2).text().toUpperCase();
+          let score = tds.eq(4).text();
+          if (major.includes("CÔNG NGHỆ SINH HỌC")) {
+            major = major.split("_")[0];
+          }
+          listMajor.push({ major: major, score: Number(score) });
+        });
+        res.send(listMajor);
+      } else {
+        res.send("Error");
+      }
+    }
+  );
+});
+app.post("/fetch-score-school-profile", (req, res) => {
+  request(
+    "https://tdmu.edu.vn/tin-tuc/tin-tong-hop/diem-chuan-trung-tuyen-som-vao-dai-hoc-he-chinh-quy-nam-2023",
+    function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        $ = cheerio.load(body);
+        var data = $(body).find(".noidungbaidang table tr");
+        let listMajor = [];
+        data.each(function (index, element) {
+          if (index >= 2) {
+            var tds = $(element).find("td");
+            let major = tds
+              .eq(1)
+              .text()
+              .trim()
+              .replace(/\s+/g, " ")
+              .toUpperCase();
+            let score_school_profile = Number(
+              tds.eq(4).text().trim().replace(/\s+/g, " ")
+            );
+            let score_rated_capacity = Number(
+              tds.eq(5).text().trim().replace(/\s+/g, " ")
+            );
+            listMajor.push({
+              major: major,
+              score_school_profile: score_school_profile,
+              score_rated_capacity: score_rated_capacity,
+            });
+          }
+        });
+        res.send(listMajor);
+      } else {
+        res.send("Error");
+      }
+    }
+  );
+});

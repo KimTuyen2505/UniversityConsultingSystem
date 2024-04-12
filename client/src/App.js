@@ -13,6 +13,7 @@ import Forum from "./Page/Forum";
 import ForumOfMajors from "./Page/ForumOfMajors";
 import DetailPost from "./Page/DetailPost";
 import Profile from "./Page/Profile";
+import Testing from "./Page/Testing";
 
 function App() {
   const [user, setUser] = useState(
@@ -43,6 +44,7 @@ function App() {
           path="/profile/:idUser"
           element={<Profile user={user} />}
         ></Route>
+        <Route path="/testing" element={<Testing />}></Route>
       </Routes>
       <Footer />
     </div>

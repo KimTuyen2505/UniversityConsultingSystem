@@ -66,15 +66,6 @@ export default function Header({ user, setUser }) {
           >
             Diễn đàn
           </Link>
-          {user?.username === "admin" && (
-            <Link
-              onClick={() => setChooseTab(0)}
-              to={"/administrators"}
-              className="uppercase font-bold duration-100 transition-color hover:text-white hover:bg-slate-400 h-full flex items-center justify-center pl-5 pr-5"
-            >
-              Quản lý
-            </Link>
-          )}
         </nav>
 
         <div className="absolute left-0 flex-col items-center justify-center hidden w-full pb-8 mt-48 border-b border-gray-200 md:relative md:w-auto md:bg-transparent md:border-none md:mt-0 md:flex-row md:p-0 md:items-end md:flex md:justify-between">

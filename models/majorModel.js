@@ -6,5 +6,8 @@ const majorSchema = new mongoose.Schema({
   detailMajor: {
     type: String,
   },
+  subjectCombination: {
+    type: [String],
+  },
 });
 module.exports = mongoose.model("major", majorSchema);
