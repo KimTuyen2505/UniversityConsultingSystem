@@ -65,7 +65,11 @@ export default function ForumOfMajors() {
                 );
                 arr.push({
                   ...post,
-                  nameAuthor: user.family_name + " " + user.given_name,
+                  nameAuthor: user.family_name
+                    ? user.family_name
+                    : "" + " " + user.given_name
+                    ? user.given_name
+                    : "",
                 });
               }
             });

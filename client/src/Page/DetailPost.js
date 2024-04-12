@@ -41,8 +41,11 @@ export default function DetailPost() {
                     );
                   listReply.push({
                     ...reply,
-                    nameAuthor:
-                      authorReply?.family_name + " " + authorReply?.given_name,
+                    nameAuthor: authorReply.family_name
+                      ? authorReply.family_name
+                      : "" + " " + authorReply.given_name
+                      ? authorReply.given_name
+                      : "",
                   });
                 });
                 let authorComment =
@@ -53,14 +56,21 @@ export default function DetailPost() {
                 checkInput[comment.idComment] = false;
                 listComment.push({
                   ...comment,
-                  nameAuthor:
-                    authorComment.family_name + " " + authorComment.given_name,
+                  nameAuthor: authorComment.family_name
+                    ? authorComment.family_name
+                    : "" + " " + authorComment.given_name
+                    ? authorComment.given_name
+                    : "",
                   reply: listReply,
                 });
                 if (index === checkExist.comments.length - 1) {
                   setPost({
                     ...checkExist,
-                    nameAuthor: user.family_name + " " + user.given_name,
+                    nameAuthor: user.family_name
+                      ? user.family_name
+                      : "" + " " + user.given_name
+                      ? user.given_name
+                      : "",
                     comments: listComment.reverse(),
                   });
                   setValueReply(obj);
@@ -70,7 +80,11 @@ export default function DetailPost() {
               if (checkExist.comments.length === 0) {
                 setPost({
                   ...checkExist,
-                  nameAuthor: user.family_name + " " + user.given_name,
+                  nameAuthor: user.family_name
+                    ? user.family_name
+                    : "" + " " + user.given_name
+                    ? user.given_name
+                    : "",
                   comments: [],
                 });
                 setValueReply(obj);
