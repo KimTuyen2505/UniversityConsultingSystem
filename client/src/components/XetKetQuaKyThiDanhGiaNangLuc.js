@@ -16,12 +16,13 @@ export default function XetKetQuaKyThiDanhGiaNangLuc({
       width: "70%",
       render: (item) => {
         return (
-          <Link
-            to={`/majors/${allMajor[item.major]._id}`}
+          <a
+            href={`/majors/${allMajor[item.major]._id}`}
+            target="_blank"
             className="text-center"
           >
             {item.major}
-          </Link>
+          </a>
         );
       },
     },
