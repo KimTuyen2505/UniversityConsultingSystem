@@ -63,13 +63,12 @@ export default function ForumOfMajors() {
                 let user = await responseAccount.data.dataAccounts.find(
                   (user) => user._id === post.author
                 );
+                console.log(user);
                 arr.push({
                   ...post,
-                  nameAuthor: user.family_name
-                    ? user.family_name
-                    : "" + " " + user.given_name
-                    ? user.given_name
-                    : "",
+                  nameAuthor: `${user.family_name ? user.family_name : ""} ${
+                    user.given_name ? user.given_name : ""
+                  }`,
                 });
               }
             });
