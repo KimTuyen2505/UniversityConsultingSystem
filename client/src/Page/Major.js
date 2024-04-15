@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { FcReading } from "react-icons/fc";
 
 import * as env from "../env.js";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Major() {
+  const navigate = useNavigate();
   const url = "https://tuyensinh.tdmu.edu.vn";
   const [majors, setMajors] = useState({
     "Ngành Sư Phạm": [],
@@ -94,26 +96,29 @@ export default function Major() {
               <div className="py-16">
                 <div className="mx-auto px-6 max-w-6xl text-gray-500">
                   <div className="relative">
-                    <div className="relative z-10 grid gap-3 grid-cols-6">
-                      {majors[major].length > 0 &&
-                        majors[major].map((childMajor) => {
-                          if (childMajor) {
-                            return (
-                              <Link
-                                className="col-span-full lg:col-span-2 overflow-hidden flex relative p-8 rounded-xl bg-white border border-gray-200 hover:bg-gray-100 cursor-pointer"
-                                to={`/majors/${childMajor.id}`}
-                              >
-                                <div className="size-fit m-auto relative">
-                                  <h2 className="text-center font-semibold text-gray-950 text-2xl">
+                    <div className="container flex flex-col items-center gap-16 mx-auto">
+                      <div className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+                        {majors[major].length > 0 &&
+                          majors[major].map((childMajor) => {
+                            if (childMajor) {
+                              return (
+                                <div
+                                  class="flex flex-col items-center gap-3 px-8 py-10 bg-white rounded-3xl shadow-lg cursor-pointer hover:shadow-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+                                  onClick={() =>
+                                    navigate(`/majors/${childMajor.id}`)
+                                  }
+                                >
+                                  <FcReading size={50} />
+                                  <p class="text-2xl font-extrabold text-dark-grey-900">
                                     {childMajor.element}
-                                  </h2>
+                                  </p>
                                 </div>
-                              </Link>
-                            );
-                          } else {
-                            return <div></div>;
-                          }
-                        })}
+                              );
+                            } else {
+                              return <div></div>;
+                            }
+                          })}
+                      </div>
                     </div>
                   </div>
                 </div>
