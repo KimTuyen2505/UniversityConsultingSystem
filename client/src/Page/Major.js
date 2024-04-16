@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Tabs } from "antd";
 import { FcReading } from "react-icons/fc";
 
 import * as env from "../env.js";
@@ -84,10 +85,12 @@ export default function Major() {
         console.log(error);
       });
   }, []);
-  return (
-    <div className="relative z-50 pt-5 mt-2 mb-2 w-4/5 m-auto">
-      <div className="bg-clip-border rounded-xl bg-white shadow-md">
-        <div className="bg-clip-border rounded-xl bg-transparent shadow-none m-0 p-6">
+  const items = [
+    {
+      label: "Ngành đào tạo",
+      key: "majors",
+      children: (
+        <div>
           {Object.keys(majors).map((major) => (
             <>
               <div className="flex justify-center text-3xl font-bold">
@@ -125,6 +128,26 @@ export default function Major() {
               </div>
             </>
           ))}
+        </div>
+      ),
+    },
+    {
+      label: "Học phí",
+      key: "tuition",
+      children: (
+        <div>
+          {[1, 2, 3, 4].map((item) => (
+            <img src={`/Images/HocPhi${item}.png`} key={item} alt="" />
+          ))}
+        </div>
+      ),
+    },
+  ];
+  return (
+    <div className="relative z-50 pt-5 mt-2 mb-2 w-4/5 m-auto">
+      <div className="bg-clip-border rounded-xl bg-white shadow-md">
+        <div className="bg-clip-border rounded-xl bg-transparent shadow-none m-0 p-6">
+          <Tabs defaultActiveKey="1" type="card" items={items} />
         </div>
       </div>
     </div>

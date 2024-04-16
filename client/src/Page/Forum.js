@@ -103,13 +103,13 @@ export default function Forum() {
                             if (childMajor) {
                               return (
                                 <div
-                                  class="flex flex-col items-center gap-3 px-8 py-10 bg-white rounded-3xl shadow-lg cursor-pointer hover:shadow-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+                                  className="flex flex-col items-center gap-3 px-8 py-10 bg-blue-100 rounded-3xl shadow-lg cursor-pointer hover:shadow-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
                                   onClick={() =>
                                     navigate(`/forum/${childMajor.id}`)
                                   }
                                 >
                                   <FcCollaboration size={50} />
-                                  <p class="text-2xl font-extrabold text-dark-grey-900">
+                                  <p className="text-2xl font-extrabold text-dark-grey-900">
                                     {childMajor.element}
                                   </p>
                                 </div>
